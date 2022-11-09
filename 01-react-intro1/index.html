@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- libreria oficial de react -->
+    <script  src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!-- libreria DOM(se encarga del navegador web) -->
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- babel transforma codigo moderno a codigo que pueda leer  -->
+    <script  src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    
+    <title>ReactApp</title>
+
+   
+
+</head>
+<body>
+  
+    <!-- con esto reenderizamos el script (dentro de divroot) -->
+    <div id="root"></div>
+
+     <script type="text/babel"> 
+        // con esto buscamos el root del id
+        const divRoot = document.querySelector('#root');
+
+        const nombre = 'valentina';
+
+        const h1Tag = <h1>un hola mundo con html xd y : una variable nom: { nombre } </h1>;
+
+
+        // renderizar el tag dentro del vidroot
+        ReactDOM.render( h1Tag, divRoot,);
+
+     </script> 
+
+
+
+
+</body>
+</html>
