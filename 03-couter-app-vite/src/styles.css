@@ -1,0 +1,23 @@
+ 
+
+ html, body{
+    background-color: rgb(32, 12, 20);
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    padding: 100px;  
+}
+
+button{
+    padding: 15px;
+    font-size: 1.3rem;
+    margin:5px;
+    border-radius: 5px 10px;  
+    background: radial-gradient(circle at 20px 20px, red, yellow);
+    cursor: pointer;
+    /* box-shadow: 60px -16px rgb(209, 168, 114)  este esta comentado full;   */
+    box-shadow: 10px 5px 5px rgb(230, 112, 16);
+    /* box-shadow: 2px 2px 2px 1px rgba(25, 215, 221, 0.2) esta comentado full; */
+}  
+
+
