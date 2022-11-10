@@ -10,7 +10,7 @@ export const FirstApp = ( {title, subTitle, name}) => {   //propiedades
   return (
     <> 
     {/* imprimimos el title, desde el navChrom*/}
-      <p> {title} </p>
+      <div data-testid="test-title"> {title} </div>
       {/*<code>{ JSON.stringify (newMessage)}</code>*/}
       <p>{subTitle}</p>
       <p>{name}</p>

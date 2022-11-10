@@ -14,7 +14,8 @@ reactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
         {/* todo lo que definamos aca, son props,que se van al componente hijo */}
         {/* < CounterApp value={0} /> */}
-        <FirstApp title="holaperra"/>
+
+        <FirstApp />
     </React.StrictMode>
 )
 
