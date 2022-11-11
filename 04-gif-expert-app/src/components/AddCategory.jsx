@@ -1,24 +1,22 @@
 // cada componente puede tener su estado y sus hookcs
 
 import { useState } from "react";
-                            //se mandanda a llamar las props del padre
+                          
 export const AddCategory = ({onNewCategory}) => {
 
-    // tenemos que manejar el estado(valores de los usuarios)
+  
     const [inputValue, setinputValue] = useState('');
 
-    const onInputChange = (event)=>{ //en la funcion podemos recibir el evento
-        //console.log(event.target.value); 
-        setinputValue(event.target.value); //linea para tener el valor en el imput
+    const onInputChange = (event)=>{ 
+        
+        setinputValue(event.target.value); 
     }
 
     const onSubmit = (event)=>{
-        event.preventDefault();//no tener refleshh del navegador
-        //console.log(inputValue); //para actualizar info y mandar 
-        if (inputValue.trim().length <= 1) return; //para salir de la funcion
-        //se reciven las props
-        // setCategories( categories => [inputValue,...categories]);  
-        // limpiar inputvalue
+        event.preventDefault();
+        
+        if (inputValue.trim().length <= 1) return; 
+
         setinputValue('');
         onNewCategory( inputValue.trim());
         
@@ -28,9 +26,9 @@ export const AddCategory = ({onNewCategory}) => {
     <form onSubmit={ (event)=> onSubmit(event)}>
         <input
             type="text"
-            placeholder="Buscar GIFS"
+            placeholder="Search"
             value={inputValue}   
-            onChange={ (event) => onInputChange(event) } //capturamos el valor
+            onChange={ (event) => onInputChange(event) } 
         />
 
     </form>

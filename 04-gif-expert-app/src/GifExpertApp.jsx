@@ -5,7 +5,7 @@ import { GidGrid } from "./components/GidGrid";
 
 export const GifExpertApp = () => {
                 
-        const [categories, setCategories] = useState([ 'Naruto']) 
+        const [categories, setCategories] = useState(['Itachi']) 
     
         const onAddCategory = ( newCategory) =>{
 
@@ -17,7 +17,7 @@ export const GifExpertApp = () => {
   return (
     <>
     
-    <h1>Gif Expert App</h1>
+    <h1>Search for gifs of your favorite characters</h1>
 
    
     <AddCategory 
