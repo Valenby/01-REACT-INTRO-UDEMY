@@ -13,7 +13,7 @@ export const GidGrid = ({ category }) => {
           isLoading && (<h2>Cargando...</h2>)
           
         }
-        <div className="card-grid ">
+        <div className="card-grid">
           {
             images.map( ( image ) => (
               <GidItem 
