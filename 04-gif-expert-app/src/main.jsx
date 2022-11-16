@@ -4,7 +4,7 @@ import { GifExpertApp } from './GifExpertApp';
 
 import './styles.css';
 
-
+//PUNTO INICIAL DE LA APP
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GifExpertApp />

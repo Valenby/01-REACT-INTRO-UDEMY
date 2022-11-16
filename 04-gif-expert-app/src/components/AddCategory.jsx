@@ -1,36 +1,29 @@
 // cada componente puede tener su estado y sus hookcs
+import { useState } from "react";  
+//COMPONENT INPUT
+export const AddCategory = ({ onNewCategory }) => {
 
-import { useState } from "react";
-                          
-export const AddCategory = ({onNewCategory}) => {
+    const [ inputValue, setinputValue ] = useState('');
 
-  
-    const [inputValue, setinputValue] = useState('');
-
-    const onInputChange = (event)=>{ 
-        
-        setinputValue(event.target.value); 
+    const onInputChange = ( event )=>{ 
+        setinputValue( event.target.value ); //PARA QUE CAMBIE EL ESTADO
     }
 
-    const onSubmit = (event)=>{
+    const onSubmit = ( event )=>{
         event.preventDefault();
-        
-        if (inputValue.trim().length <= 1) return; 
-
+        if ( inputValue.trim().length <= 1 ) return; 
         setinputValue('');
-        onNewCategory( inputValue.trim());
-        
+        onNewCategory( inputValue.trim() );
     }
 
   return (
-    <form onSubmit={ (event)=> onSubmit(event)}>
+    <form onSubmit={ onSubmit }>
         <input
             type="text"
             placeholder="Search"
-            value={inputValue}   
-            onChange={ (event) => onInputChange(event) } 
+            value={ inputValue }   
+            onChange={  onInputChange } 
         />
-
     </form>
     
 

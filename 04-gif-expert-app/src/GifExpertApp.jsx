@@ -1,40 +1,39 @@
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-import { GidGrid } from "./components/GidGrid";
+import { AddCategory, GidGrid } from "./components";
 
-
+//COMPONENT PRINCIPAL
 export const GifExpertApp = () => {
                 
-        const [categories, setCategories] = useState(['Itachi']) 
-    
-        const onAddCategory = ( newCategory) =>{
+    const [ categories, setCategories ] = useState(['Rick and Morty'])
 
-            if ( categories.includes ( newCategory) ) return;  
-        
-            setCategories([newCategory, ...categories ]);
-       }
+    const onAddCategory = ( newCategory) =>{
 
-  return (
-    <>
+        if ( categories.includes ( newCategory ) ) return;  
     
-    <h1>Search for gifs of your favorite characters</h1>
-
-   
-    <AddCategory 
-        onNewCategory={onAddCategory}
-    />  
-    
-    {
-    categories.map( (category) => (
-        <GidGrid 
-        key={category}  
-        category={category} />
-        ))
-                
+        setCategories([ newCategory, ...categories ]);
     }
-   
-      
 
-    </>
-  )
+return (
+
+  <>
+  <h1>Gvon no tengo título jeje, parchese y busque lo que quiera </h1>  
+  <h1>...(Nopor *NO* perras)...</h1>
+  {/* input */}
+  <AddCategory 
+      onNewCategory={onAddCategory} //MANDAMOS REFERENCIA A LA FUNCION ONNEWCATEGORY
+  />  
+  {/* lista, map.. esto nos renderiza la busqueda del input */}
+  {
+  categories.map( ( category ) => (
+      <GidGrid 
+      key={category}  
+      category={category} />
+      ))
+              
+  }
+  
+    
+
+  </>
+)
 }
