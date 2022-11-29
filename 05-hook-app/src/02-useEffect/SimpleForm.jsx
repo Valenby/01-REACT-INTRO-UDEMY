@@ -35,11 +35,6 @@ export const SimpleForm = () => {
     useEffect(()=>{
         // console.log('useEffect email#3');
     }, [email]);
-
-
-
-
-
   return (
     <>
 
