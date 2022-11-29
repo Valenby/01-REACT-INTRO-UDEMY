@@ -29,10 +29,10 @@ export const TodoAdd = ({onNewTodo}) => {
 
   return (
     
-    <form>
-       <input onSubmit={onFormSubmit} 
+    <form onSubmit={onFormSubmit} >
+       <input 
           type="text"
-          placeholder="..."
+          placeholder="Ingresa algo uwu"
           className="form-control"
           name="description"
           value={ description }
