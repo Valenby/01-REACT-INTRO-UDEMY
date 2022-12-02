@@ -5,7 +5,7 @@ import { DcPage, HeroPege, MarvelPages, SearchPages } from "../pages"
 import { Navbar } from "../../iu-interfazGrafica/components/Navbar"
 
 
-//componente dondepones rutas 
+//componente  rutas 
 export const HeroesRoutes = () => {
   return (
    <>

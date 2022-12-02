@@ -1,6 +1,6 @@
 //dependencias react-router.
 import {  Route, Routes } from "react-router-dom";
-//components de moduloHero en las peges.
+// rutas del components moduloHero.
 import { HeroesRoutes } from "../moduloHero";
 //components de moduloAuth en las peges.
 import { LoginPage } from "../moduloAuth";
