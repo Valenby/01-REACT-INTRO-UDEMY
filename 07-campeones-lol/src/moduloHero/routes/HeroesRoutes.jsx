@@ -21,7 +21,7 @@ export const HeroesRoutes = () => {
 
 
                 <Route path="search" element={ <SearchPages/> } />
-                <Route path="hero/:heroId" element={ <HeroPege/> } />
+                <Route path="hero/:id" element={ <HeroPege/> } />
 
                
                 {/* path donde queremos que se renderice nuestra primer vista */}
