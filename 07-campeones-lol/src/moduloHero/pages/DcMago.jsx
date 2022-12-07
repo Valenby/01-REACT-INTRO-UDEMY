@@ -7,7 +7,7 @@ export const DcMago = () => {
       <h1>✿ AP Carrys ✿</h1>
       <br />
       <hr />
-      <HeroList publisher="DC Magos"/>
+      <HeroList publisher="Mago"/>
    </>
   )
 }

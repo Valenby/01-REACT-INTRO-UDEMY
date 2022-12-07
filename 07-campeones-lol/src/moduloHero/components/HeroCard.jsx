@@ -18,7 +18,7 @@ export const HeroCard = ({
       <div className="card">
           <div className="row no-gutters">
 
-              <div className="col-4">
+              <div className="col-4 animate__animated animate__fadeIn">
                  <img  src={heroImagerUrl} className="card-img" alt={ campeon }/>
               </div>
 
@@ -36,7 +36,7 @@ export const HeroCard = ({
                         </p>
 
                        
-                        <Link className="card-title" to={`/hero/${ id }`} >
+                        <Link className="card-title " to={`/hero/${ id }`} >
                         Más...
                         </Link>
                        
