@@ -1,19 +1,32 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import queryString from 'query-string';
 import { useForm } from "../../hook/useForm";
-import { HeroCard } from "../components/index";
+import { HeroCard } from "../components";
+import { getHeroesByName } from "../helpers";
 
 
 export const SearchPages = () => {
 
+  const navigate = useNavigate(); 
+  const location = useLocation();
+
+  const { q ='' } = queryString.parse( location.search);
+  const heroes1 = getHeroesByName(q);
   // hook useForm
   const {searchText, onInputChange} = useForm({
-    searchText: '',
+    searchText: q,
   });
+
+  const showSearch = (q.length === 0);
+  const showError = (q.length > 0) && heroes1.length === 0;
+  
 
   //from onSubmit
   const onSearchSubmit = (event) =>{
     event.preventDefault();
-    if ( searchText.trim().length <= 1 ) return;
-    console.log({searchText});
+    // if ( searchText.trim().length <= 1 ) return;
+     
+    navigate(`?q=${searchText }`);
   }
 
   return (
@@ -22,7 +35,7 @@ export const SearchPages = () => {
       <h1>Search</h1> 
       <hr />
 
-    <div className="row">
+    <div className="row animate__animated animate__pulse">
       <div className="col-5">
           <h4>Ingresa Campeon</h4>
           <hr />
@@ -49,15 +62,29 @@ export const SearchPages = () => {
         <h4>Resultado 7u7</h4>
         <hr />
 
-        <div className="alert alert-primary">
-          Search un campeon
-        </div>
+        {/* {
+          ( q === '')
+          ?<div className="alert alert-primary">Busca un campeon</div>
+          : (heroes1.length === 0) && <div className="alert alert-danger">No se encontraron resultados <b> {q} </b></div>
+        } */}
 
-        <div className="alert alert-danger">
-          No se encontraron resultados
-        </div>
+      <div className="alert alert-primary " 
+        style={{ display: showSearch ? '' : 'none' }}>
+        Busca un campeon
+      </div>
 
-        {/* <HeroCard/> */}
+      <div className="alert alert-danger " 
+        style={{ display: showError ? '' : 'none' }}>
+        No se encontraron resultados<b>{q}</b>
+      </div>
+
+
+        {
+          heroes1.map( hero => (
+            <HeroCard key={ hero.id } {...hero } />
+          ))
+        }
+     
 
       </div>
   </div>
