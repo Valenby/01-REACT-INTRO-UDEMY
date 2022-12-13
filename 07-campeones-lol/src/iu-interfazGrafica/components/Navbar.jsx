@@ -6,13 +6,14 @@ import { AuthContext } from "../../moduloAuth/context/AuthContext";
 export const Navbar = () => {
 
     //login con nombre de usuario
-    const {user} = useContext(AuthContext)
+    const {user, logout} = useContext(AuthContext)
    
 
     // costomHook para navegar por las rutas
     const navigate = useNavigate();
 
     const cerrarSeccion =()=>{
+        logout();
         navigate('/login', {
             replace: true /*  replace evita regresar al historial en rutas */
         });
