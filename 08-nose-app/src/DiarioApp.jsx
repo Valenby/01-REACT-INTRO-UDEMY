@@ -1,11 +1,15 @@
 import { RutaPrincipal } from "./router/RutaPrincipal";
+import { AppTheme } from "./theme";
 
 
 export const DiarioApp = () => {
   return (
     <>
-    
-    <RutaPrincipal/>
+    <AppTheme>
+
+      <RutaPrincipal/>
+
+    </AppTheme>
     
     
     </>
