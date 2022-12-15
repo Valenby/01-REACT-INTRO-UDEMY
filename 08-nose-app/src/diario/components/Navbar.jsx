@@ -1,8 +1,8 @@
-import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Avatar, Grid, IconButton, Toolbar, Typography } from "@mui/material";
 import { LogoutOutlined, MenuOutlined } from "@mui/icons-material";
 
 
-export const Navbar = ({ drawerWidth = 240 }) => {
+export const Navbar = ({ drawerWidth = 280 }) => {
   return (
    <AppBar 
         position='fixed'
@@ -20,10 +20,11 @@ export const Navbar = ({ drawerWidth = 240 }) => {
                 <MenuOutlined/>
             </IconButton>
 
-            <Grid container direction='row' justifyContent='space-between'>
-                <Typography variant="h6">Diario App </Typography>
+            <Grid container direction='row' justifyContent='space-between' alignItems="center">
+                <Typography variant="h6" noWrap component="div">Diario App </Typography>
                 <IconButton color="error">
                     <LogoutOutlined/>
+                    
                 </IconButton>
             </Grid>
 
